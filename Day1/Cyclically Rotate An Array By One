@@ -1,0 +1,28 @@
+https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1?page=1&difficulty[]=-1&category[]=Arrays&sortBy=submissions
+
+void rotate(int arr[], int n)
+{
+    // reverse(arr,arr+n);
+    
+    int i=0;
+    int j=n-1;
+    while(i<j){
+        int temp;
+        temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+        i++;
+        j--;
+    }
+   
+   int start=1;
+   int end=n-1;
+   while(start<end){
+        int temp;
+        temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+   }
+}
