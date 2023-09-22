@@ -1,0 +1,32 @@
+https://practice.geeksforgeeks.org/problems/binary-array-sorting-1587115620/1?page=1&difficulty[]=-1&category[]=Arrays&sortBy=submissions
+
+//Ist approach (TLE)
+           sort(A,A+N);
+
+//IInd Approach (ALL TEST CASES PASSED)
+            int count0=0;
+            int count1=0;
+            for(int i=0;i<N;i++){
+                if(A[i]==0) count0++;
+                else count1++;
+            }
+                int i=0;
+                while(count0!=0 ){
+                        A[i]=0;
+                        i++;
+                        count0--;
+                        }
+                        while(count1!=0){
+                            A[i]=1;
+                            i++;
+                            count1--;
+                        }
+//IIIrd approach (ALL TEST CASES PASSED)
+            int low=0;
+            for(int i=0;i<N;i++){
+                if(A[i]==0){
+                    swap(A[i],A[low++]);
+                }
+            }
+            
+                
